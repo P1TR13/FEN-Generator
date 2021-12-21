@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    color: #000;
+    background-color: #eeeed2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#board.disable-selection {
+    user-select: none;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: 100px auto 100px;
+    grid-template-rows: auto auto auto auto;
+}
+
+#text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    grid-column: span 3;
+}
+
+#text:hover {
+    cursor: default;
+}
+
+#text p:hover {
+    cursor: pointer;
+    color: #00000080;
+}
+
+
+#board {
+    width: 560px;
+    height: 560px;
+    display: grid;
+    grid-template-columns: 70px 70px 70px 70px 70px 70px 70px 70px;
+    grid-template-rows: 70px 70px 70px 70px 70px 70px 70px 70px;
+    justify-content: center;
+    border: 5px solid #769656;
+}
+
+.square {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.black {
+    background-color:  #769656;
+}
+
+.black:hover {
+    cursor: pointer;
+    background-color:  #769656c9;
+}
+
+.white {
+    background-color: #eeeed2;
+    z-index: 5;
+}
+
+.white:hover {
+    cursor: pointer;
+    background-color:  #dadabc;
+}
+
+#input {
+    grid-column: span 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    margin-top: 25px;
+    width: 550px;
+    height: 30px;
+    background-color: #dadabc;
+    border: none;
+    border-radius: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+}
+
+input:focus {
+    outline: none;
+}
+
+dialog {
+    font-size: 15px;
+}
+
+#button {
+    text-align: center;
+}
+
+button {
+    width: 50px;
+    height: 25px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#blackPieces, #whitePieces {
+    width: 100px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto auto;
+    text-align: center;
+}
+
+#blackPieces text, #whitePieces text {
+    display: block;
+}
+
+.pieceButton:hover {
+    cursor: pointer;
+}

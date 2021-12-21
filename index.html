@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>FEN Generator</title>
+        <link rel = "stylesheet" href = "style.css"/>
+    </head>
+    <body onselectstart="return false;">
+        
+        <div id = "grid">
+
+            <div id = "text">
+                <p id = "info">
+                    FEN Generator
+                </p>
+            </div>
+
+            <dialog id="infoDialog">
+                <form method="dialog">
+                    <p><b>FEN</b> is the abbreviation of Forsyth-Edwards Notation,<br/>and it is the standard notation to describe positions of a chess game.</p>
+                    <p>
+                        e.g.
+                        <br />
+                        rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR
+                        <br />
+                        1n1Rkb1r/p4ppp/4q3/4p1B1/4P3/8/PPP2PPP/2K5
+                    </p>
+                    <div id = "button">
+                        <button value="cancel">OK</button>
+                    </div>
+                </form>
+            </dialog>
+
+            <div id = "blackPieces"></div>
+
+            <div id = "board" onselectstart="return false;"></div>
+
+            <div id = "whitePieces"></div>
+
+            <div id = "input">
+                <input type = "text" autocomplete = "off" placeholder = "FEN"  id = "input" disabled value = "8/8/8/8/8/8/8/8"/>
+            </div>
+
+        </div>
+        <script src = "script.js"></script>
+    </body>
+</html>
