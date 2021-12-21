@@ -169,8 +169,27 @@ function putPiece() {
     }))
 }
 
+function clear() {
+    document.querySelector("#clear").addEventListener("click", function() {
+        console.log("ok")
+        infoPieces = [['1','1','1','1','1','1','1','1','1','1'],
+        ['1','0','0','0','0','0','0','0','0','1'],
+        ['1','0','0','0','0','0','0','0','0','1'],
+        ['1','0','0','0','0','0','0','0','0','1'],
+        ['1','0','0','0','0','0','0','0','0','1'],
+        ['1','0','0','0','0','0','0','0','0','1'],
+        ['1','0','0','0','0','0','0','0','0','1'],
+        ['1','0','0','0','0','0','0','0','0','1'],
+        ['1','0','0','0','0','0','0','0','0','1'],
+        ['1','1','1','1','1','1','1','1','1','1']]
+        let squares = document.querySelectorAll(".square")
+        squares.forEach(s => s.innerHTML = "")
+    })
+}
+
 createBoard()
 gettingBoxes()
 createChessPieces()
+clear()
 button()
 putPiece()
